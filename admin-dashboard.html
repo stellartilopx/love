@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Applications · Admin · The Love Application</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+  <header class="admin-header">
+    <a class="admin-brand" href="/admin/dashboard"><span aria-hidden="true">♥</span> The Love Application</a>
+    <button class="admin-link" id="logoutButton" type="button">Sign out</button>
+  </header>
+  <main class="admin-layout">
+    <div class="admin-heading">
+      <div><p class="admin-kicker">Creator dashboard</p><h1>Applications</h1></div>
+      <a class="admin-primary" href="/api/admin/export">Export CSV</a>
+    </div>
+    <section class="stats-grid" aria-label="Application overview">
+      <article class="stat-card"><span>Total applications</span><strong id="totalCount">0</strong></article>
+      <article class="stat-card"><span>Latest submission</span><strong id="latestDate">—</strong></article>
+      <article class="stat-card"><span>Status</span><strong>Submitted</strong></article>
+    </section>
+    <section class="applications-panel">
+      <div class="toolbar">
+        <label for="applicationSearch">Search applications</label>
+        <input id="applicationSearch" type="search" placeholder="Name, nickname or application ID">
+        <label class="sort-label" for="applicationSort">Sort by</label>
+        <select id="applicationSort">
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="name">Name</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Applicant</th><th>Application ID</th><th>Result</th><th>Submitted</th><th>Status</th><th></th></tr></thead>
+          <tbody id="applicationsBody"></tbody>
+        </table>
+        <div class="empty-state" id="emptyState" hidden>No applications match this view.</div>
+      </div>
+    </section>
+  </main>
+  <dialog class="application-dialog" id="applicationDialog">
+    <form method="dialog">
+      <button class="dialog-close" value="close" aria-label="Close application">×</button>
+      <div id="applicationDetail"></div>
+    </form>
+  </dialog>
+  <script src="/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2a0ba">
+  <meta name="description" content="Apply for the very serious position of becoming someone's favourite person.">
+  <meta property="og:title" content="The Love Application">
+  <meta property="og:description" content="A delightfully serious application for the position of someone's favourite person.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="favicon.svg">
+  <meta name="twitter:card" content="summary">
+  <title>The Love Application</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="The Love Application home">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span>The Love Application</span>
+    </a>
+    <div class="confidential"><span></span> Confidential submission</div>
+  </header>
+
+  <main>
+    <section class="screen landing-screen active" id="landing" aria-labelledby="landing-title">
+      <div class="landing-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> Official application portal</div>
+        <h1 id="landing-title">Application for the Position of <em>My Favourite Person</em></h1>
+        <p class="hero-subtitle">A highly serious opportunity for someone exceptionally charming, suspiciously kind, and brave enough to apply.</p>
+        <button class="primary-button" id="startButton" type="button">
+          <span>Apply now</span>
+          <span class="button-arrow" aria-hidden="true">→</span>
+        </button>
+        <p class="microcopy">Takes about 3 minutes · No reference checks required</p>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="floating-heart heart-one">♥</div>
+        <div class="floating-heart heart-two">♥</div>
+        <div class="floating-heart heart-three">♥</div>
+        <div class="letter-card">
+          <div class="letter-seal">♥</div>
+          <div class="letter-rule"></div>
+          <p>To the one</p>
+          <strong>I choose, always.</strong>
+          <div class="letter-signature">Your future favourite</div>
+        </div>
+        <div class="availability-pill"><span></span> Position open</div>
+      </div>
+    </section>
+
+    <section class="screen form-screen" id="application" aria-labelledby="application-title" hidden>
+      <div class="section-heading">
+        <button class="back-button" data-back="landing" type="button" aria-label="Go back">←</button>
+        <div>
+          <p class="step-label">Part one · Applicant details</p>
+          <h2 id="application-title">Tell us about you.</h2>
+        </div>
+        <div class="progress-dots" aria-label="Application progress">
+          <span class="current"></span><span></span><span></span>
+        </div>
+      </div>
+
+      <form id="applicationForm" novalidate>
+        <div class="form-grid">
+          <div class="field-group">
+            <label for="fullName">Full name <span aria-hidden="true">*</span></label>
+            <input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="Your finest legal name" required>
+            <p class="field-error" id="fullNameError"></p>
+          </div>
+          <div class="field-group">
+            <label for="nickname">Preferred nickname</label>
+            <input id="nickname" name="nickname" type="text" placeholder="What should I call you?">
+          </div>
+
+          <div class="field-group field-full">
+            <label for="deserve">Why do you deserve this position? <span aria-hidden="true">*</span></label>
+            <textarea id="deserve" name="deserve" rows="3" placeholder="Confidence is attractive. Evidence is stronger..." required></textarea>
+            <p class="field-error" id="deserveError"></p>
+          </div>
+          <div class="field-group">
+            <label for="special">What makes you special? <span aria-hidden="true">*</span></label>
+            <textarea id="special" name="special" rows="3" placeholder="Besides being rather extraordinary..." required></textarea>
+            <p class="field-error" id="specialError"></p>
+          </div>
+          <div class="field-group">
+            <label>How good are you at making someone smile? <span aria-hidden="true">*</span></label>
+            <fieldset class="choice-row" id="smileChoice">
+              <legend class="sr-only">How good are you at making someone smile?</legend>
+              <label><input type="radio" name="smile" value="Quite good"><span>Quite good</span></label>
+              <label><input type="radio" name="smile" value="Very good"><span>Very good</span></label>
+              <label><input type="radio" name="smile" value="Expert"><span>Expert</span></label>
+              <label><input type="radio" name="smile" value="Professionally irresistible"><span>Professionally irresistible</span></label>
+            </fieldset>
+            <p class="field-error" id="smileError"></p>
+          </div>
+
+          <div class="field-group field-full">
+            <label for="boringDay">What would you do on a boring day together? <span aria-hidden="true">*</span></label>
+            <textarea id="boringDay" name="boringDay" rows="3" placeholder="Be honest—we're looking for excellent company..." required></textarea>
+            <p class="field-error" id="boringDayError"></p>
+          </div>
+
+          <fieldset class="question-card field-full">
+            <legend>Choose your ideal first assignment</legend>
+            <div class="question-options">
+              <label><input type="radio" name="assignment" value="Emergency snack run"><span><b>01</b> Emergency snack run</span></label>
+              <label><input type="radio" name="assignment" value="Create a tiny surprise"><span><b>02</b> Create a tiny surprise</span></label>
+              <label><input type="radio" name="assignment" value="Dance in the kitchen"><span><b>03</b> Dance in the kitchen</span></label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form-actions">
+          <p><span aria-hidden="true">♥</span> Your answers are judged with affection.</p>
+          <button class="primary-button" type="submit">Continue to interview <span class="button-arrow" aria-hidden="true">→</span></button>
+        </div>
+      </form>
+    </section>
+
+    <section class="screen interview-screen" id="interview" aria-labelledby="interview-title" hidden>
+      <div class="interview-shell">
+        <div class="section-heading interview-heading">
+          <button class="back-button" data-back="application" type="button" aria-label="Go back">←</button>
+          <div>
+            <p class="step-label">Part two · A brief interview</p>
+            <h2 id="interview-title">A few crucial questions.</h2>
+          </div>
+          <div class="question-count" id="questionCount">01 / 05</div>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="interviewProgress"></div></div>
+
+        <div class="interview-card" id="interviewCard">
+          <p class="question-kicker" id="questionKicker">Commitment assessment</p>
+          <h3 id="interviewQuestion"></h3>
+          <div class="answer-list" id="answerList"></div>
+          <div class="reaction" id="reaction" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen review-screen" id="review" aria-labelledby="review-title" hidden>
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-monogram" aria-hidden="true">♥</div>
+          <div>
+            <p class="step-label">Part three · Application review</p>
+            <h2 id="review-title">Review your application</h2>
+          </div>
+        </div>
+        <div class="application-document">
+          <div class="document-head"><span>Applicant file</span><strong id="reviewReference">LA-0000</strong></div>
+          <dl class="review-summary">
+            <div><dt>Applicant</dt><dd id="reviewName"></dd></div>
+            <div><dt>Nickname</dt><dd id="reviewNickname"></dd></div>
+            <div><dt>Smile credentials</dt><dd id="reviewSmile"></dd></div>
+            <div><dt>Ideal assignment</dt><dd id="reviewAssignment"></dd></div>
+          </dl>
+          <div class="review-answers">
+            <p><span>Why this position?</span><strong id="reviewDeserve"></strong></p>
+            <p><span>What makes you special?</span><strong id="reviewSpecial"></strong></p>
+            <p><span>A perfectly boring day</span><strong id="reviewBoring"></strong></p>
+          </div>
+          <div class="interview-summary"><span>Interview selections</span><ol id="reviewInterview"></ol></div>
+        </div>
+        <p class="privacy-note">When submitted, your responses are sent to the site owner and stored for the creator/admin to review. They are not displayed publicly.</p>
+        <div class="review-actions">
+          <button class="secondary-button" data-back="application" type="button">Edit application</button>
+          <button class="primary-button" id="submitApplication" type="button">Submit application <span class="button-arrow" aria-hidden="true">→</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen result-screen" id="result" aria-labelledby="result-title" hidden>
+      <div class="result-card">
+        <div class="result-seal" aria-hidden="true">♥</div>
+        <p class="step-label">Official decision</p>
+        <h2 id="result-title">Application approved.</h2>
+        <p class="result-name" id="resultName"></p>
+        <div class="result-tags" id="resultTags" aria-label="Application review highlights"></div>
+        <p class="result-message" id="resultMessage"></p>
+        <div class="result-celebration" aria-hidden="true"><span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span></div>
+        <div class="result-actions">
+          <button class="primary-button" id="restartButton" type="button"><span class="button-arrow restart-arrow" aria-hidden="true">↻</span> Restart application</button>
+          <button class="secondary-button" id="copyButton" type="button">Copy result</button>
+          <button class="secondary-button" id="shareButton" type="button"><span aria-hidden="true">↗</span> Share result</button>
+          <button class="secondary-button" id="downloadButton" type="button">Download image</button>
+        </div>
+        <p class="share-status" id="shareStatus" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <details class="privacy-disclosure">
+    <summary>Privacy notice</summary>
+    <p>When you submit, your answers are sent to the site owner and stored for the creator/admin to review. They are not displayed publicly.</p>
+  </details>
+
+  <dialog class="restart-dialog" id="restartDialog" aria-labelledby="restart-title">
+    <form method="dialog">
+      <p class="step-label">Begin again?</p>
+      <h2 id="restart-title">Restart this application?</h2>
+      <p>Your current answers and result will be cleared.</p>
+      <div class="dialog-actions">
+        <button class="secondary-button" value="cancel">Keep application</button>
+        <button class="primary-button" id="confirmRestart" value="restart">Restart</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
